@@ -1,0 +1,489 @@
+{
+  "id": "doc_ai_skill_explanation",
+  "meta": {
+    "title": "AI Skill 深度解析"
+  },
+  "options": {
+    "ratio": "auto",
+    "theme": "dark",
+    "bgm": "/data/bgm.mp3"
+  },
+  "pluginDatas": {},
+  "slides": [
+    {
+      "options": {
+        "ratio": "auto",
+        "theme": "dark"
+      },
+      "elements": [
+        {
+          "id": "ele_cover_bg",
+          "type": "div",
+          "x": -200,
+          "y": -200,
+          "width": 1800,
+          "height": 1200,
+          "props": {
+            "style": "background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.2), rgba(0, 0, 0, 0)); filter: blur(100px); position: absolute; z-index: -1;"
+          },
+          "slots": {
+            "default": ""
+          },
+          "animations": [
+            {
+              "id": "anim_cover_bg",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__fadeIn",
+              "duration": 1.5,
+              "delay": 0,
+              "audio": ""
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "ele_title",
+          "type": "div",
+          "x": 100,
+          "y": 180,
+          "width": 1000,
+          "height": 200,
+          "props": {
+            "style": "font-size: 120px; font-weight: 900; line-height: 1.1; background: linear-gradient(135deg, #818cf8, #c084fc); -webkit-background-clip: text; color: transparent; text-shadow: 0 0 40px rgba(129, 140, 248, 0.3);"
+          },
+          "slots": {
+            "default": "AI Skill"
+          },
+          "animations": [
+            {
+              "id": "anim_title",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__fadeInDown",
+              "duration": 1.2,
+              "delay": 0.2,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "ele_subtitle",
+          "type": "div",
+          "x": 120,
+          "y": 400,
+          "width": 800,
+          "height": 80,
+          "props": {
+            "style": "font-size: 32px; color: #e2e8f0; font-weight: 300; letter-spacing: 1px;"
+          },
+          "slots": {
+            "default": "赋予大模型特定领域执行能力的基石"
+          },
+          "animations": [
+            {
+              "id": "anim_sub",
+              "type": "in",
+              "step": 1,
+              "animate": "animate__fadeInUp",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 1
+        },
+        {
+          "id": "ele_badge",
+          "type": "div",
+          "x": 120,
+          "y": 500,
+          "width": 240,
+          "height": 50,
+          "props": {
+            "style": "background: rgba(129, 140, 248, 0.15); border: 1px solid rgba(129, 140, 248, 0.3); border-radius: 50px; display: flex; align-items: center; justify-content: center; color: #818cf8; font-weight: bold; font-size: 16px; backdrop-filter: blur(10px);"
+          },
+          "slots": {
+            "default": "AI CAPABILITY"
+          },
+          "animations": [
+            {
+              "id": "anim_badge",
+              "type": "in",
+              "step": 1,
+              "animate": "animate__zoomIn",
+              "duration": 0.8,
+              "delay": 0.2,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 1
+        }
+      ]
+    },
+    {
+      "options": {
+        "ratio": "auto",
+        "theme": "dark"
+      },
+      "elements": [
+        {
+          "id": "ele_problem_title",
+          "type": "div",
+          "x": 100,
+          "y": 80,
+          "width": 800,
+          "height": 80,
+          "props": {
+            "style": "font-size: 56px; font-weight: 800; color: #ffffff; border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 15px;"
+          },
+          "slots": {
+            "default": "为什么需要 Skill？"
+          },
+          "animations": [
+            {
+              "id": "anim_prob_title",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__fadeInLeft",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "ele_card_base",
+          "type": "div",
+          "x": 100,
+          "y": 200,
+          "width": 500,
+          "height": 350,
+          "props": {
+            "style": "background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 30px; display: flex; flex-direction: column; justify-content: center; backdrop-filter: blur(10px);"
+          },
+          "slots": {
+            "default": "<div style='font-size: 24px; color: #94a3b8; margin-bottom: 20px;'>基础大模型 (Base Model)</div><div style='font-size: 20px; color: #cbd5e1; line-height: 1.6;'>通用的对话能力<br>缺乏专业知识<br>无法直接连接外部API<br>难以执行复杂任务</div>"
+          },
+          "animations": [
+            {
+              "id": "anim_card_base",
+              "type": "in",
+              "step": 1,
+              "animate": "animate__fadeIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 1
+        },
+        {
+          "id": "ele_plus_icon",
+          "type": "div",
+          "x": 630,
+          "y": 330,
+          "width": 80,
+          "height": 80,
+          "props": {
+            "style": "font-size: 60px; color: #64748b; display: flex; align-items: center; justify-content: center; font-weight: bold;"
+          },
+          "slots": {
+            "default": "+"
+          },
+          "animations": [
+            {
+              "id": "anim_plus",
+              "type": "in",
+              "step": 2,
+              "animate": "animate__zoomIn",
+              "duration": 0.5,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 2
+        },
+        {
+          "id": "ele_card_skill",
+          "type": "div",
+          "x": 730,
+          "y": 200,
+          "width": 500,
+          "height": 350,
+          "props": {
+            "style": "background: rgba(129, 140, 248, 0.1); border: 1px solid rgba(129, 140, 248, 0.3); border-radius: 20px; padding: 30px; display: flex; flex-direction: column; justify-content: center; backdrop-filter: blur(10px); box-shadow: 0 0 30px rgba(129, 140, 248, 0.2);"
+          },
+          "slots": {
+            "default": "<div style='font-size: 24px; color: #818cf8; margin-bottom: 20px; font-weight: bold;'>AI Skill</div><div style='font-size: 20px; color: #e2e8f0; line-height: 1.6;'>注入领域知识<br>封装工具调用<br>规范输出格式<br>实现工作流编排</div>"
+          },
+          "animations": [
+            {
+              "id": "anim_card_skill",
+              "type": "in",
+              "step": 2,
+              "animate": "animate__fadeIn",
+              "duration": 1,
+              "delay": 2.2,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 2
+        }
+      ]
+    },
+    {
+      "options": {
+        "ratio": "auto",
+        "theme": "dark"
+      },
+      "elements": [
+        {
+          "id": "ele_arch_title",
+          "type": "div",
+          "x": 100,
+          "y": 80,
+          "width": 800,
+          "height": 80,
+          "props": {
+            "style": "font-size: 56px; font-weight: 800; color: #ffffff;"
+          },
+          "slots": {
+            "default": "Skill 核心架构"
+          },
+          "animations": [
+            {
+              "id": "anim_arch_title",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__fadeInDown",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "ele_layer_1",
+          "type": "div",
+          "x": 100,
+          "y": 200,
+          "width": 1050,
+          "height": 80,
+          "props": {
+            "style": "background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.4); border-radius: 12px; display: flex; align-items: center; padding: 0 30px; backdrop-filter: blur(5px);"
+          },
+          "slots": {
+            "default": "<div style='font-size: 22px; color: #fff; font-weight: bold;'>应用层 (App)</div><div style='margin-left: auto; font-size: 18px; color: #a5b4fc;'>Chatbot / Copilot / Agent</div>"
+          },
+          "animations": [
+            {
+              "id": "anim_layer_1",
+              "type": "in",
+              "step": 1,
+              "animate": "animate__slideInLeft",
+              "duration": 0.8,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 1
+        },
+        {
+          "id": "ele_layer_2",
+          "type": "div",
+          "x": 100,
+          "y": 300,
+          "width": 1050,
+          "height": 80,
+          "props": {
+            "style": "background: rgba(139, 92, 246, 0.2); border: 1px solid rgba(139, 92, 246, 0.4); border-radius: 12px; display: flex; align-items: center; padding: 0 30px; backdrop-filter: blur(5px);"
+          },
+          "slots": {
+            "default": "<div style='font-size: 22px; color: #fff; font-weight: bold;'>编排层 (Orchestrator)</div><div style='margin-left: auto; font-size: 18px; color: #c4b5fd;'>LangChain / Semantic Kernel</div>"
+          },
+          "animations": [
+            {
+              "id": "anim_layer_2",
+              "type": "in",
+              "step": 2,
+              "animate": "animate__slideInLeft",
+              "duration": 0.8,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 2
+        },
+        {
+          "id": "ele_layer_3",
+          "type": "div",
+          "x": 100,
+          "y": 400,
+          "width": 1050,
+          "height": 80,
+          "props": {
+            "style": "background: rgba(192, 132, 252, 0.2); border: 1px solid rgba(192, 132, 252, 0.4); border-radius: 12px; display: flex; align-items: center; padding: 0 30px; backdrop-filter: blur(5px);"
+          },
+          "slots": {
+            "default": "<div style='font-size: 22px; color: #fff; font-weight: bold;'>技能层 (Skill)</div><div style='margin-left: auto; font-size: 18px; color: #e9d5ff;'>Function Calling / Plugins</div>"
+          },
+          "animations": [
+            {
+              "id": "anim_layer_3",
+              "type": "in",
+              "step": 3,
+              "animate": "animate__slideInLeft",
+              "duration": 0.8,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 3
+        },
+        {
+          "id": "ele_layer_4",
+          "type": "div",
+          "x": 100,
+          "y": 500,
+          "width": 1050,
+          "height": 80,
+          "props": {
+            "style": "background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 12px; display: flex; align-items: center; padding: 0 30px; backdrop-filter: blur(5px);"
+          },
+          "slots": {
+            "default": "<div style='font-size: 22px; color: #fff; font-weight: bold;'>模型层 (LLM)</div><div style='margin-left: auto; font-size: 18px; color: #7dd3fc;'>GPT-4 / Claude / Llama</div>"
+          },
+          "animations": [
+            {
+              "id": "anim_layer_4",
+              "type": "in",
+              "step": 4,
+              "animate": "animate__slideInLeft",
+              "duration": 0.8,
+              "delay": 0,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 4
+        }
+      ]
+    },
+    {
+      "options": {
+        "ratio": "auto",
+        "theme": "dark"
+      },
+      "elements": [
+        {
+          "id": "ele_end_bg",
+          "type": "div",
+          "x": -200,
+          "y": -200,
+          "width": 1800,
+          "height": 1200,
+          "props": {
+            "style": "background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15), rgba(0, 0, 0, 0)); filter: blur(80px); position: absolute; z-index: -1;"
+          },
+          "slots": {
+            "default": ""
+          },
+          "animations": [
+            {
+              "id": "anim_end_bg",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__fadeIn",
+              "duration": 1.5,
+              "delay": 0,
+              "audio": ""
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "ele_end_title",
+          "type": "div",
+          "x": 100,
+          "y": 200,
+          "width": 900,
+          "height": 150,
+          "props": {
+            "style": "font-size: 90px; font-weight: 900; line-height: 1.2; background: linear-gradient(90deg, #fff, #94a3b8); -webkit-background-clip: text; color: transparent;"
+          },
+          "slots": {
+            "default": "能力进化"
+          },
+          "animations": [
+            {
+              "id": "anim_end_title",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__zoomIn",
+              "duration": 1.2,
+              "delay": 0.3,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "ele_end_sub",
+          "type": "div",
+          "x": 120,
+          "y": 380,
+          "width": 900,
+          "height": 100,
+          "props": {
+            "style": "font-size: 28px; color: #cbd5e1; line-height: 1.5; font-weight: 300;"
+          },
+          "slots": {
+            "default": "通过 AI Skill，让通用大模型进化为<br>真正的行业专家与超级助手。"
+          },
+          "animations": [
+            {
+              "id": "anim_end_sub",
+              "type": "in",
+              "step": 1,
+              "animate": "animate__fadeInUp",
+              "duration": 1.5,
+              "delay": 0.5,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 1
+        },
+        {
+          "id": "ele_thanks",
+          "type": "div",
+          "x": 120,
+          "y": 500,
+          "width": 400,
+          "height": 50,
+          "props": {
+            "style": "font-size: 20px; color: #64748b; font-style: italic;"
+          },
+          "slots": {
+            "default": "— Thanks for watching —"
+          },
+          "animations": [
+            {
+              "id": "anim_thanks",
+              "type": "in",
+              "step": 1,
+              "animate": "animate__fadeIn",
+              "duration": 1.5,
+              "delay": 0.8,
+              "audio": ""
+            }
+          ],
+          "enterStep": 1
+        }
+      ]
+    }
+  ],
+  "currentSlideIndex": 0
+}

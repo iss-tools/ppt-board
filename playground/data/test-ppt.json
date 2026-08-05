@@ -1,0 +1,558 @@
+{
+  "id": "doc_test_ppt",
+  "meta": {
+    "title": "Rich Auto Canvas Presentation"
+  },
+  "options": {
+    "ratio": "auto",
+    "theme": "dark",
+    "bgm": "/data/bgm.mp3"
+  },
+  "pluginDatas": {},
+  "slides": [
+    {
+      "options": {
+        "ratio": "auto",
+        "theme": "dark"
+      },
+      "elements": [
+        {
+          "id": "s1_glow1",
+          "type": "div",
+          "x": 100,
+          "y": 100,
+          "width": 400,
+          "height": 400,
+          "props": {
+            "style": "background: rgba(66, 184, 131, 0.4); border-radius: 50%; filter: blur(100px);"
+          },
+          "slots": {},
+          "animations": [
+            {
+              "id": "a1",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__fadeIn",
+              "duration": 0.6,
+              "delay": 0,
+              "audio": ""
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "s1_glow2",
+          "type": "div",
+          "x": 900,
+          "y": 400,
+          "width": 500,
+          "height": 500,
+          "props": {
+            "style": "background: rgba(64, 158, 255, 0.3); border-radius: 50%; filter: blur(120px);"
+          },
+          "slots": {},
+          "animations": [
+            {
+              "id": "a2",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__fadeIn",
+              "duration": 0.6,
+              "delay": 0.5,
+              "audio": ""
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "s1_grid",
+          "type": "div",
+          "x": 50,
+          "y": 50,
+          "width": 1340,
+          "height": 800,
+          "props": {
+            "style": "background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px; border-radius: 20px;"
+          },
+          "slots": {},
+          "animations": [
+            {
+              "id": "a3",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__fadeIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": ""
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "s1_title",
+          "type": "div",
+          "x": 320,
+          "y": 250,
+          "width": 800,
+          "height": 120,
+          "props": {
+            "style": "font-size: 84px; font-weight: 900; color: #fff; text-align: center; text-shadow: 0 10px 30px rgba(0,0,0,0.5);"
+          },
+          "slots": {
+            "default": "Vue Canvas <span style='color: #42b883'>Editor</span>"
+          },
+          "animations": [
+            {
+              "id": "a4",
+              "type": "in",
+              "step": 1,
+              "animate": "animate__zoomInDown",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 1
+        },
+        {
+          "id": "s1_subtitle",
+          "type": "div",
+          "x": 420,
+          "y": 400,
+          "width": 600,
+          "height": 60,
+          "props": {
+            "style": "font-size: 28px; color: #a0aabf; text-align: center; letter-spacing: 2px;"
+          },
+          "slots": {
+            "default": "The Infinite Freeform Presentation Engine"
+          },
+          "animations": [
+            {
+              "id": "a5",
+              "type": "in",
+              "step": 2,
+              "animate": "animate__fadeInUp",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 2
+        },
+        {
+          "id": "s1_float1",
+          "type": "div",
+          "x": 200,
+          "y": 550,
+          "width": 250,
+          "height": 120,
+          "props": {
+            "style": "background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(10px); padding: 20px; color: #42b883; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; transform: rotate(-5deg);"
+          },
+          "slots": {
+            "default": "✨ Auto Ratio"
+          },
+          "animations": [
+            {
+              "id": "a6",
+              "type": "in",
+              "step": 3,
+              "animate": "animate__bounceIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 3
+        },
+        {
+          "id": "s1_float2",
+          "type": "div",
+          "x": 990,
+          "y": 520,
+          "width": 250,
+          "height": 120,
+          "props": {
+            "style": "background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; backdrop-filter: blur(10px); padding: 20px; color: #409eff; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; transform: rotate(5deg);"
+          },
+          "slots": {
+            "default": "🎵 Rich Audio"
+          },
+          "animations": [
+            {
+              "id": "a7",
+              "type": "in",
+              "step": 4,
+              "animate": "animate__bounceIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 4
+        }
+      ]
+    },
+    {
+      "options": {
+        "ratio": "auto",
+        "theme": "dark"
+      },
+      "elements": [
+        {
+          "id": "s2_title",
+          "type": "div",
+          "x": 100,
+          "y": 80,
+          "width": 500,
+          "height": 80,
+          "props": {
+            "style": "font-size: 56px; font-weight: 800; color: #e6a23c; border-left: 8px solid #e6a23c; padding-left: 20px;"
+          },
+          "slots": {
+            "default": "Rich Components"
+          },
+          "animations": [
+            {
+              "id": "b1",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__slideInLeft",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "s2_f0",
+          "type": "div",
+          "x": 100,
+          "y": 250,
+          "width": 350,
+          "height": 220,
+          "props": {
+            "style": "background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(20,20,20,0.8)); border-top: 4px solid #42b883; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: flex; flex-direction: column; gap: 15px;"
+          },
+          "slots": {
+            "default": "<div style=\"font-size: 40px\">🚀</div>\n                <div style=\"font-size: 24px; font-weight: bold; color: #42b883\">Infinite Canvas</div>\n                <div style=\"font-size: 16px; color: #aaa; line-height: 1.5;\">No boundaries, absolute freedom.</div>"
+          },
+          "animations": [
+            {
+              "id": "b_f0",
+              "type": "in",
+              "step": 1,
+              "animate": "animate__zoomIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 1
+        },
+        {
+          "id": "s2_f1",
+          "type": "div",
+          "x": 500,
+          "y": 250,
+          "width": 350,
+          "height": 220,
+          "props": {
+            "style": "background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(20,20,20,0.8)); border-top: 4px solid #409eff; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: flex; flex-direction: column; gap: 15px;"
+          },
+          "slots": {
+            "default": "<div style=\"font-size: 40px\">🎨</div>\n                <div style=\"font-size: 24px; font-weight: bold; color: #409eff\">Vue Ecosystem</div>\n                <div style=\"font-size: 16px; color: #aaa; line-height: 1.5;\">Render any Vue component.</div>"
+          },
+          "animations": [
+            {
+              "id": "b_f1",
+              "type": "in",
+              "step": 2,
+              "animate": "animate__zoomIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 2
+        },
+        {
+          "id": "s2_f2",
+          "type": "div",
+          "x": 900,
+          "y": 250,
+          "width": 350,
+          "height": 220,
+          "props": {
+            "style": "background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(20,20,20,0.8)); border-top: 4px solid #e6a23c; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: flex; flex-direction: column; gap: 15px;"
+          },
+          "slots": {
+            "default": "<div style=\"font-size: 40px\">⚡️</div>\n                <div style=\"font-size: 24px; font-weight: bold; color: #e6a23c\">High Performance</div>\n                <div style=\"font-size: 16px; color: #aaa; line-height: 1.5;\">Optimized rendering pipeline.</div>"
+          },
+          "animations": [
+            {
+              "id": "b_f2",
+              "type": "in",
+              "step": 3,
+              "animate": "animate__zoomIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 3
+        },
+        {
+          "id": "s2_f3",
+          "type": "div",
+          "x": 100,
+          "y": 550,
+          "width": 350,
+          "height": 220,
+          "props": {
+            "style": "background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(20,20,20,0.8)); border-top: 4px solid #f56c6c; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: flex; flex-direction: column; gap: 15px;"
+          },
+          "slots": {
+            "default": "<div style=\"font-size: 40px\">🎬</div>\n                <div style=\"font-size: 24px; font-weight: bold; color: #f56c6c\">Timeline Animations</div>\n                <div style=\"font-size: 16px; color: #aaa; line-height: 1.5;\">Keyframe based animation system.</div>"
+          },
+          "animations": [
+            {
+              "id": "b_f3",
+              "type": "in",
+              "step": 4,
+              "animate": "animate__zoomIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 4
+        },
+        {
+          "id": "s2_f4",
+          "type": "div",
+          "x": 500,
+          "y": 550,
+          "width": 350,
+          "height": 220,
+          "props": {
+            "style": "background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(20,20,20,0.8)); border-top: 4px solid #9c27b0; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: flex; flex-direction: column; gap: 15px;"
+          },
+          "slots": {
+            "default": "<div style=\"font-size: 40px\">🔊</div>\n                <div style=\"font-size: 24px; font-weight: bold; color: #9c27b0\">Spatial Audio</div>\n                <div style=\"font-size: 16px; color: #aaa; line-height: 1.5;\">Sound effects on every step.</div>"
+          },
+          "animations": [
+            {
+              "id": "b_f4",
+              "type": "in",
+              "step": 5,
+              "animate": "animate__zoomIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 5
+        },
+        {
+          "id": "s2_f5",
+          "type": "div",
+          "x": 900,
+          "y": 550,
+          "width": 350,
+          "height": 220,
+          "props": {
+            "style": "background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(20,20,20,0.8)); border-top: 4px solid #00bcd4; border-radius: 16px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: flex; flex-direction: column; gap: 15px;"
+          },
+          "slots": {
+            "default": "<div style=\"font-size: 40px\">📱</div>\n                <div style=\"font-size: 24px; font-weight: bold; color: #00bcd4\">Responsive Layout</div>\n                <div style=\"font-size: 16px; color: #aaa; line-height: 1.5;\">Adapts to any screen via code.</div>"
+          },
+          "animations": [
+            {
+              "id": "b_f5",
+              "type": "in",
+              "step": 6,
+              "animate": "animate__zoomIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 6
+        }
+      ]
+    },
+    {
+      "options": {
+        "ratio": "auto",
+        "theme": "dark"
+      },
+      "elements": [
+        {
+          "id": "s3_title",
+          "type": "div",
+          "x": 150,
+          "y": 100,
+          "width": 800,
+          "height": 80,
+          "props": {
+            "style": "font-size: 56px; font-weight: 800; color: #fff;"
+          },
+          "slots": {
+            "default": "Developer Friendly"
+          },
+          "animations": [
+            {
+              "id": "c1",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__fadeInDown",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "s3_code",
+          "type": "div",
+          "x": 150,
+          "y": 220,
+          "width": 600,
+          "height": 400,
+          "props": {
+            "style": "background: #1e1e1e; border-radius: 12px; padding: 20px; font-family: monospace; color: #d4d4d4; font-size: 18px; line-height: 1.6; border: 1px solid #333; box-shadow: 0 20px 40px rgba(0,0,0,0.4);"
+          },
+          "slots": {
+            "default": "<span style=\"color:#569cd6\">const</span> <span style=\"color:#4fc1ff\">editor</span> = <span style=\"color:#dcdcaa\">ref</span>(<span style=\"color:#569cd6\">null</span>);\n\n<span style=\"color:#569cd6\">const</span> <span style=\"color:#dcdcaa\">play</span> = () <span style=\"color:#569cd6\">=></span> {\n  <span style=\"color:#4fc1ff\">editor</span>.<span style=\"color:#9cdcfe\">value</span>?.<span style=\"color:#dcdcaa\">play</span>({\n    <span style=\"color:#9cdcfe\">autoAdvance</span>: <span style=\"color:#569cd6\">true</span>,\n    <span style=\"color:#9cdcfe\">theme</span>: <span style=\"color:#ce9178\">'dark'</span>\n  });\n};\n\n<span style=\"color:#6a9955\">// Pure data driven slides!</span>"
+          },
+          "animations": [
+            {
+              "id": "c2",
+              "type": "in",
+              "step": 1,
+              "animate": "animate__fadeInLeft",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 1
+        },
+        {
+          "id": "s3_chart",
+          "type": "div",
+          "x": 800,
+          "y": 220,
+          "width": 500,
+          "height": 400,
+          "props": {
+            "style": "background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; border: 8px dashed rgba(66, 184, 131, 0.5);"
+          },
+          "slots": {
+            "default": "<div style=\"font-size: 80px; font-weight: 900; color: #42b883\">100%</div><div style=\"font-size: 24px; color: #aaa\">Customizable</div>"
+          },
+          "animations": [
+            {
+              "id": "c3",
+              "type": "in",
+              "step": 2,
+              "animate": "animate__rollIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 2
+        }
+      ]
+    },
+    {
+      "options": {
+        "ratio": "auto",
+        "theme": "dark"
+      },
+      "elements": [
+        {
+          "id": "s4_bg",
+          "type": "div",
+          "x": 0,
+          "y": 0,
+          "width": 2000,
+          "height": 1200,
+          "props": {
+            "style": "background: radial-gradient(circle at center, #2b1055 0%, #000000 100%); pointer-events: none;"
+          },
+          "slots": {},
+          "animations": [
+            {
+              "id": "d0",
+              "type": "in",
+              "step": 0,
+              "animate": "animate__fadeIn",
+              "duration": 1,
+              "delay": 0,
+              "audio": ""
+            }
+          ],
+          "enterStep": 0
+        },
+        {
+          "id": "s4_center",
+          "type": "div",
+          "x": 420,
+          "y": 350,
+          "width": 600,
+          "height": 200,
+          "props": {
+            "style": "font-size: 96px; font-weight: 900; color: #fff; text-align: center; text-shadow: 0 0 40px #9c27b0, 0 0 80px #9c27b0;"
+          },
+          "slots": {
+            "default": "Thank You!"
+          },
+          "animations": [
+            {
+              "id": "d1",
+              "type": "in",
+              "step": 1,
+              "animate": "animate__flipInX",
+              "duration": 1.5,
+              "delay": 0,
+              "audio": "/data/slide.mp3"
+            }
+          ],
+          "enterStep": 1
+        },
+        {
+          "id": "s4_sub",
+          "type": "div",
+          "x": 520,
+          "y": 550,
+          "width": 400,
+          "height": 60,
+          "props": {
+            "style": "font-size: 24px; color: #e0e0e0; text-align: center; background: rgba(255,255,255,0.1); border-radius: 30px; line-height: 60px; backdrop-filter: blur(5px);"
+          },
+          "slots": {
+            "default": "github.com/iss-ai/vue-canvas"
+          },
+          "animations": [
+            {
+              "id": "d2",
+              "type": "in",
+              "step": 2,
+              "animate": "animate__lightSpeedInRight",
+              "duration": 1,
+              "delay": 0,
+              "audio": "/data/element.mp3"
+            }
+          ],
+          "enterStep": 2
+        }
+      ]
+    }
+  ]
+}
