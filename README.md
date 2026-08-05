@@ -9,6 +9,8 @@ It integrates the **NaiveUI** component library and provides a comprehensive plu
 
 - **Built-in UI Context** - Wraps the core engine with NaiveUI's configuration, message, dialog, and notification providers.
 - **Plugin System Host** - The primary application host for plugins. Easily develop extensions using our `create-vue-canvas-plugin` CLI.
+- **Unified Local Database** - Provides a blazing fast, zero-schema-conflict local database (`useEasyStore`) for plugins powered by a single Dexie instance and compound primary keys.
+- **Transparent Editor Proxy** - The `VueCanvasEditor` wrapper perfectly proxies the core engine, exposing all its methods and slots seamlessly.
 - **Unified API Surface** - Fully re-exports all components, types, and composables from `@iss-ai/vue-canvas-core`.
 - **Infinite Canvas & Slides** - Supports free-form `auto` ratio or fixed presentation ratios.
 - **Rich Media & Animation** - Audio and timeline-based animations handled natively.

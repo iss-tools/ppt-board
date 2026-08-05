@@ -1,6 +1,6 @@
 {
   "name": "@iss-ai/ppt-board",
-  "description": "A fully-featured presentation and editing host application built on vue-canvas-core, integrating NaiveUI and plugin system support.",
+  "description": "A fully-featured presentation and editing host application built on vue-canvas-core, integrating NaiveUI, a plugin system, and a unified local Dexie database.",
   "version": "0.0.0",
   "author": "iss-tools",
   "keywords": [
@@ -9,7 +9,9 @@
     "editor",
     "presentation",
     "slides",
-    "engine"
+    "engine",
+    "dexie",
+    "database"
   ],
   "homepage": "https://github.com/iss-tools/ppt-board#readme",
   "repository": {
