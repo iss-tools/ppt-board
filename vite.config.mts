@@ -21,7 +21,7 @@ export default defineConfig({
       formats: ['es', 'cjs', 'umd', 'iife'],
     },
     rollupOptions: {
-      external: ["vue", "naive-ui", "@iss-ai/vue-canvas-core"],
+      external: ["vue", "naive-ui", "@iss-ai/vue-canvas-core", "animate.css", "dexie", "vfonts"],
       output: {
         globals: {
           vue: 'Vue',
