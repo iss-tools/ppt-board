@@ -112,7 +112,7 @@
     "vue": "^3.0.0"
   },
   "dependencies": {
-    "@iss-ai/vue-canvas-core": "^0.0.8",
+    "@iss-ai/vue-canvas-core": "^0.0.10",
     "animate.css": "^4.1.1",
     "dexie": "^4.4.4",
     "naive-ui": "^2.44.1",
