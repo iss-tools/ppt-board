@@ -1,14 +1,14 @@
 <template>
   <div class="editor-container">
     <div class="floating-actions">
-      <n-dropdown v-if="!isPreviewing" trigger="hover" :options="previewOptions" @select="handlePreviewSelect">
+      <!-- <n-dropdown v-if="!isPreviewing" trigger="hover" :options="previewOptions" @select="handlePreviewSelect">
         <button class="icon-btn play-btn" title="Preview Options">
           <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
             <path d="M8 5v14l11-7z" />
           </svg>
         </button>
-      </n-dropdown>
-      <a class="icon-btn agent-btn" v-if="!isPreviewing" href="./AGENT.md" download="AGENT.md"
+      </n-dropdown> -->
+      <!-- <a class="icon-btn agent-btn" v-if="!isPreviewing" href="./AGENT.md" download="AGENT.md"
         title="Download AI Prompt">
         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
           <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
@@ -24,10 +24,10 @@
           <path
             d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
         </svg>
-      </button>
+      </button> -->
     </div>
 
-    <VueCanvasEditor v-if="!isPreviewing" ref="editorRef" />
+    <VueCanvasEditor v-if="!isPreviewing" ref="editorRef" :plugins="activePlugins" />
     <Preview v-else ref="previewRef" />
 
     <n-modal v-model:show="showImportModal" preset="card" style="width: 600px" title="Import JSON Data">
@@ -54,6 +54,20 @@ import { Preview } from '@iss-ai/vue-canvas-core';
 import { VueCanvasEditor } from '../src';
 import testPptData from './data/test-ppt.json';
 import introPptData from './data/intro.json';
+
+import { MenuPlugin } from 'plugin-menu';
+import { MyLibraryPlugin } from 'plugin-my-library';
+import { SearchPlugin } from 'plugin-search';
+import { StoragePlugin } from 'plugin-storage';
+import { StylePropsPlugin } from 'plugin-style-props';
+
+const activePlugins = [
+  MenuPlugin,
+  MyLibraryPlugin,
+  SearchPlugin,
+  StoragePlugin,
+  StylePropsPlugin
+];
 
 const editorRef = ref<InstanceType<typeof VueCanvasEditor> | null>(null);
 const previewRef = ref<InstanceType<typeof Preview> | null>(null);

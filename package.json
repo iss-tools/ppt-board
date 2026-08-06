@@ -115,6 +115,11 @@
     "@iss-ai/vue-canvas-core": "^0.0.10",
     "animate.css": "^4.1.1",
     "dexie": "^4.4.4",
-    "naive-ui": "^2.44.1"
+    "naive-ui": "^2.44.1",
+    "plugin-menu": "workspace:*",
+    "plugin-my-library": "workspace:*",
+    "plugin-search": "workspace:*",
+    "plugin-storage": "workspace:*",
+    "plugin-style-props": "workspace:*"
   }
 }

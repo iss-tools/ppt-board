@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import {
   NConfigProvider,
   NMessageProvider,
@@ -25,6 +25,10 @@ import {
   type GlobalThemeOverrides
 } from 'naive-ui';
 import { CanvasEditor } from '@iss-ai/vue-canvas-core';
+
+const props = defineProps<{
+  plugins?: any[];
+}>();
 
 // Provide basic theme overrides if needed, allow plugins or users to override
 const themeOverrides: GlobalThemeOverrides = {
@@ -37,6 +41,15 @@ const themeOverrides: GlobalThemeOverrides = {
 };
 
 const editorRef = ref<InstanceType<typeof CanvasEditor> | null>(null);
+
+onMounted(() => {
+  if (props.plugins && editorRef.value) {
+    props.plugins.forEach(plugin => {
+      // Pass the plugin to the core CanvasEditor
+      editorRef.value?.usePlugin(plugin);
+    });
+  }
+});
 
 // Expose the underlying CanvasEditor methods via Proxy to act as a transparent wrapper
 defineExpose(
