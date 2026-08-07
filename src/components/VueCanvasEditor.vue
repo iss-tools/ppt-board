@@ -1,5 +1,5 @@
 <template>
-  <n-config-provider :theme-overrides="themeOverrides" style="width: 100%; height: 100%;">
+  <n-config-provider :theme="isDark ? darkTheme : null" :theme-overrides="themeOverrides" style="width: 100%; height: 100%;">
     <n-message-provider>
       <n-dialog-provider>
         <n-notification-provider>
@@ -16,15 +16,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed, useAttrs } from 'vue';
 import {
   NConfigProvider,
   NMessageProvider,
   NDialogProvider,
   NNotificationProvider,
+  darkTheme,
   type GlobalThemeOverrides
 } from 'naive-ui';
 import { CanvasEditor } from '@iss-ai/vue-canvas-core';
+
+const attrs = useAttrs();
+const isDark = computed(() => attrs.theme === 'dark' || (!attrs.theme && true)); // default to dark in canvas core
 
 const props = defineProps<{
   plugins?: any[];
