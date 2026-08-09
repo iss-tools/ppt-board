@@ -13,6 +13,7 @@ export default defineConfig({
       'plugin-storage': resolve(__dirname, '../../plugins/plugin-storage/src/index.ts'),
       'plugin-style-props': resolve(__dirname, '../../plugins/plugin-style-props/src/index.ts'),
       'plugin-ai': resolve(__dirname, '../../plugins/plugin-ai/src/index.ts'),
+      'plugin-cooperation': resolve(__dirname, '../../plugins/plugin-cooperation/src/index.ts'),
       '@iss-ai/ppt-board': resolve(__dirname, '../src/index.ts'),
     }
   },
