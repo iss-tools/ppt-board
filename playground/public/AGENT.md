@@ -50,7 +50,7 @@
         // [必填] 当前页面的元素数组
         {
           "id": "ele_xxx", // [必填] 字符串，页面内唯一ID
-          "type": "div", // [必填] 字符串，合法的 HTML 标签名。仅限: "div", "span", "img", "h1", "h2", "p"
+          "type": "div", // [必填] 字符串，不仅支持标准 HTML 标签如 "div", "span", "img", "h1", "p" 等，还支持矢量图形 "svg" (及内嵌的 "path", "circle" 等)，以及用于绘制手绘线框、多边形的专用组件 "RoughElement"
           "x": 100, // [必填] 数字，距离左侧的绝对坐标 (建议 50-1100 之间)
           "y": 150, // [必填] 数字，距离顶部的绝对坐标 (绝对不要超过 600，防止底部溢出！)
           "width": 600, // [必填] 数字，元素宽度
@@ -88,6 +88,19 @@
 }
 ```
 
+> **补充说明：关于手绘引擎组件 `RoughElement` 的参数规范**
+> 如果你在上述元素的 `type` 中使用了 `"RoughElement"`，它的 `props` 不再是纯 CSS `style`，而是专门用于驱动底层 Rough.js 引擎的配置项：
+>
+> - `shape` [必填] 字符串，决定图形种类。仅限：`"rectangle"`(矩形), `"ellipse"`(椭圆/圆), `"diamond"`(菱形), `"polygon"`(多边形), `"path"`(SVG路径), `"line"`(直线), `"arrow"`(箭头)。
+> - `pathData` [条件必填] 字符串，当 shape 为 `"path"` 时必须提供，如 `"M 50 0 L 100 100 Z"`。
+> - `points` [条件必填] 二维数组，当 shape 为 `"polygon" | "line" | "arrow"` 时必须提供，例如 `[[0,0], [100,50], [50,100]]`。
+> - `stroke` [可选] 边框颜色。
+> - `strokeWidth` [可选] 边框粗细，数字如 `1.5`。
+> - `fill` [可选] 内部填充颜色。
+> - `fillStyle` [可选] 填充样式。支持 `"solid"`(纯色涂满), `"hachure"`(经典手绘斜线), `"zigzag"`(锯齿), `"cross-hatch"`(交叉阴影), `"dots"`(点阵点状) 等。
+> - `roughness` [可选] 粗糙度。数字 `0.1` 显得非常规整，`1.5` 及以上显得十分随性潦草。
+> - _注：由于 `RoughElement` 内部负责绘制图形本体，你需要把它当做背景层或装饰物，文字依然建议使用单独的 `div` 或 `h1` 元素叠加在其上方。_
+
 **【可选字典与枚举约束 (严格限制)】**
 如果大模型能力较弱，请严格核对以下枚举值，绝不能超出以下列表：
 
@@ -100,6 +113,16 @@
   - 滑动翻转：`animate__slideInLeft`, `animate__slideInRight`, `animate__flipInX`, `animate__flipInY`
   - 炫酷：`animate__lightSpeedInRight`, `animate__rollIn`
 
+- **视觉效果可选项 (你在生成时请根据用户选择的风格和效果，将其应用到 `props.style` 甚至新增相应的背景或特效节点)**：
+  - **布局特征**: `极简留白`, `卡片矩阵`, `分屏布局`, `瀑布流`, `居中对称`, `非对称散点`, `拼图画廊`, `对角线`, `画中画`, `全屏大图`
+  - **配色特征**: `深色模式`, `浅色模式`, `莫兰迪色`, `极光`, `日落`, `霓虹`, `森林`, `玫瑰色`, `深海`, `高对比度`, `紫电`, `马卡龙`, `血色`, `薄荷`, `岩浆`, `冰原`, `黑金`, `青花瓷`, `赛博`, `琥珀`, `静谧`
+  - **字体特征**: `无衬线`, `衬线`, `思源黑体`, `思源宋体`, `站酷快乐体`, `站酷小薇`, `马善政毛笔体`, `刘建毛草`, `龙藏体`, `智芒星`, `Outfit`
+  - **整体风格**: `科技未来`, `赛博朋克`, `新拟态 (Neumorphism)`, `极简现代`, `复古像素`, `玻璃拟物 (Glassmorphism)`, `水墨国风`, `波普艺术`, `手绘草图`, `立体 3D`
+  - **阴影处理**: `投影`, `厚投影`, `内阴影`, `发光`, `硬投影`, `玻璃高光`, `拟态凸起`, `拟态凹陷`, `故障`
+  - **文字特效**: `描边`, `渐变`, `立体`, `霓虹`, `故障抖动`, `水墨晕染`
+  - **图形式样**: `基础矩形`, `完美圆形`, `圆角矩形`, `几何多边形`, `流体渐变形状`, `星形`, `对话气泡`, `手绘涂鸦线`, `像素块阵列`
+  - **边框式样**: `实线边框`, `虚线边框`, `点状虚线`, `双线边框`, `手绘波浪线`, `不规则草图`, `科技感折线`, `毛边撕裂感`
+
 **【高级排版与设计指南（必读）】**
 因为 `ratio` 设置为了 `"auto"`，这意味着画布大小等同于真实浏览器的窗口大小，不会强行缩放。为了保证在大多数屏幕（如 1440x900 或 1200x800）上展示完美，请严格遵循以下法则：
 
@@ -110,6 +133,28 @@
    - 装饰性的全屏背景图可以设置 `x: -200, y: -200, width: 2000, height: 1200`，并结合极大的 `filter: blur(100px)` 以及偏暗的背景色。
 
 2. **现代 Web 美学 (CSS3)**：
+   - **核心配色库参考 (当你决定使用以下配色风格时，请优先使用对应的渐变或色值)**：
+     - **深色模式**: `linear-gradient(135deg, #0f2027, #203a43, #2c5364)`
+     - **浅色模式**: `linear-gradient(135deg, #fdfbfb, #ebedee)`
+     - **莫兰迪色**: `linear-gradient(135deg, #d3d3d3, #b5b5b5, #8f8f8f)`
+     - **极光**: `linear-gradient(135deg, #0d324d, #7f5a83, #00b4d8)`
+     - **日落**: `linear-gradient(135deg, #f7971e, #ffd200, #ff5e62)`
+     - **霓虹**: `linear-gradient(135deg, #0f0c29, #302b63, #24243e)`
+     - **森林**: `linear-gradient(135deg, #134e5e, #71b280, #a8e063)`
+     - **玫瑰色**: `linear-gradient(135deg, #f8cdda, #1d2b64, #f8cdda)`
+     - **深海**: `linear-gradient(135deg, #005c97, #363795, #00d2ff)`
+     - **高对比度**: `linear-gradient(135deg, #111, #555, #ccc)`
+     - **紫电**: `linear-gradient(135deg, #360033, #0b8793, #8e0e00)`
+     - **马卡龙**: `linear-gradient(135deg, #fbc2eb, #a6c1ee, #ffecd2)`
+     - **血色**: `linear-gradient(135deg, #1a1a2e, #16213e, #e94560)`
+     - **薄荷**: `linear-gradient(135deg, #00b09b, #96c93d, #ffffff)`
+     - **岩浆**: `linear-gradient(135deg, #200122, #6f0000, #cc2b2b)`
+     - **冰原**: `linear-gradient(135deg, #e0eafc, #cfdef3, #a8c0ff)`
+     - **黑金**: `linear-gradient(135deg, #1a1a1a, #4a4a4a, #d4af37)`
+     - **青花瓷**: `linear-gradient(135deg, #ffffff, #f0f0f0, #003366)`
+     - **赛博**: `linear-gradient(135deg, #ff00ff, #00ffff, #00ff00)`
+     - **琥珀**: `linear-gradient(135deg, #ff7e5f, #feb47b)`
+     - **静谧**: `linear-gradient(135deg, #2c3e50, #3498db)`
    - **渐变文本**：`background: linear-gradient(...); -webkit-background-clip: text; color: transparent;`
    - **毛玻璃质感 (Glassmorphism)**：`background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px;`
    - **光影与霓虹灯 (Glow)**：`box-shadow: 0 0 40px rgba(66, 184, 131, 0.4); text-shadow: 0 0 20px rgba(66, 184, 131, 0.8);`
