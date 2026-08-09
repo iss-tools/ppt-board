@@ -116,12 +116,12 @@
     "animate.css": "^4.1.1",
     "dexie": "^4.4.4",
     "naive-ui": "^2.44.1",
-    "plugin-menu": "workspace:*",
-    "plugin-my-library": "workspace:*",
-    "plugin-search": "workspace:*",
-    "plugin-storage": "workspace:*",
-    "plugin-style-props": "workspace:*",
-    "plugin-ai": "workspace:*",
-    "plugin-cooperation": "workspace:*"
+    "@iss-ai/plugin-ai": "workspace:*",
+    "@iss-ai/plugin-cooperation": "workspace:*",
+    "@iss-ai/plugin-menu": "workspace:*",
+    "@iss-ai/plugin-my-library": "workspace:*",
+    "@iss-ai/plugin-search": "workspace:*",
+    "@iss-ai/plugin-storage": "workspace:*",
+    "@iss-ai/plugin-style-props": "workspace:*"
   }
 }

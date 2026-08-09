@@ -55,13 +55,13 @@ import { VueCanvasEditor } from '@iss-ai/ppt-board';
 import testPptData from './data/test-ppt.json';
 import introPptData from './data/intro.json';
 
-import { MenuPlugin } from 'plugin-menu';
-import { MyLibraryPlugin } from 'plugin-my-library';
-import { SearchPlugin } from 'plugin-search';
-import { StoragePlugin } from 'plugin-storage';
-import { StylePropsPlugin } from 'plugin-style-props';
-import { AIPlugin } from 'plugin-ai';
-import { CooperationPlugin } from 'plugin-cooperation';
+import { MenuPlugin } from '@iss-ai/plugin-menu';
+import { MyLibraryPlugin } from '@iss-ai/plugin-my-library';
+import { SearchPlugin } from '@iss-ai/plugin-search';
+import { StoragePlugin } from '@iss-ai/plugin-storage';
+import { StylePropsPlugin } from '@iss-ai/plugin-style-props';
+import { AIPlugin } from '@iss-ai/plugin-ai';
+import { CooperationPlugin } from '@iss-ai/plugin-cooperation';
 
 const activePlugins = [
   MenuPlugin,
