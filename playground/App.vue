@@ -61,6 +61,7 @@ import { SearchPlugin } from 'plugin-search';
 import { StoragePlugin } from 'plugin-storage';
 import { StylePropsPlugin } from 'plugin-style-props';
 import { AIPlugin } from 'plugin-ai';
+import { CooperationPlugin } from 'plugin-cooperation';
 
 const activePlugins = [
   MenuPlugin,
@@ -68,7 +69,8 @@ const activePlugins = [
   SearchPlugin,
   StoragePlugin,
   StylePropsPlugin,
-  AIPlugin
+  AIPlugin,
+  CooperationPlugin
 ];
 
 const editorRef = ref<InstanceType<typeof VueCanvasEditor> | null>(null);

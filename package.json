@@ -121,6 +121,7 @@
     "plugin-search": "workspace:*",
     "plugin-storage": "workspace:*",
     "plugin-style-props": "workspace:*",
-    "plugin-ai": "workspace:*"
+    "plugin-ai": "workspace:*",
+    "plugin-cooperation": "workspace:*"
   }
 }
