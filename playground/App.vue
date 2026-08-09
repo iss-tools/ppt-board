@@ -51,7 +51,7 @@ import { onMounted, ref } from 'vue';
 import { NDropdown, NModal, NTabs, NTabPane, NUpload, NButton, NInput } from 'naive-ui';
 import type { UploadFileInfo } from 'naive-ui';
 import { Preview } from '@iss-ai/vue-canvas-core';
-import { VueCanvasEditor } from '../src';
+import { VueCanvasEditor } from '@iss-ai/ppt-board';
 import testPptData from './data/test-ppt.json';
 import introPptData from './data/intro.json';
 
@@ -60,13 +60,15 @@ import { MyLibraryPlugin } from 'plugin-my-library';
 import { SearchPlugin } from 'plugin-search';
 import { StoragePlugin } from 'plugin-storage';
 import { StylePropsPlugin } from 'plugin-style-props';
+import { AIPlugin } from 'plugin-ai';
 
 const activePlugins = [
   MenuPlugin,
   MyLibraryPlugin,
   SearchPlugin,
   StoragePlugin,
-  StylePropsPlugin
+  StylePropsPlugin,
+  AIPlugin
 ];
 
 const editorRef = ref<InstanceType<typeof VueCanvasEditor> | null>(null);
