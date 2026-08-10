@@ -112,12 +112,6 @@
     "vue": "^3.0.0"
   },
   "dependencies": {
-    "@iss-ai/plugin-ai": "^0.0.2",
-    "@iss-ai/plugin-cooperation": "^0.0.1",
-    "@iss-ai/plugin-menu": "^0.0.1",
-    "@iss-ai/plugin-my-library": "^0.0.1",
-    "@iss-ai/plugin-storage": "^0.0.1",
-    "@iss-ai/plugin-style-props": "^0.0.1",
     "@iss-ai/vue-canvas-core": "^0.0.11",
     "animate.css": "^4.1.1",
     "dexie": "^4.4.4",
