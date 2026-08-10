@@ -6,7 +6,6 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
   envPrefix: ['VITE_', 'ABLY_', 'CHANNEL_'],
   optimizeDeps: {
-    exclude: ['@iss-ai/plugin-cooperation']
   },
   resolve: {
     alias: {}
