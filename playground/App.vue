@@ -57,7 +57,6 @@ import introPptData from './data/intro.json';
 
 import { MenuPlugin } from '@iss-ai/plugin-menu';
 import { MyLibraryPlugin } from '@iss-ai/plugin-my-library';
-import { SearchPlugin } from '@iss-ai/plugin-search';
 import { StoragePlugin } from '@iss-ai/plugin-storage';
 import { StylePropsPlugin } from '@iss-ai/plugin-style-props';
 import { AIPlugin } from '@iss-ai/plugin-ai';
@@ -70,7 +69,6 @@ console.log('DEBUG: ABLY_API_KEY from import.meta.env is:', ablyApiKey);
 const activePlugins = [
   MenuPlugin,
   MyLibraryPlugin,
-  SearchPlugin,
   StoragePlugin,
   StylePropsPlugin,
   AIPlugin,

@@ -120,7 +120,6 @@
     "@iss-ai/plugin-cooperation": "workspace:*",
     "@iss-ai/plugin-menu": "workspace:*",
     "@iss-ai/plugin-my-library": "workspace:*",
-    "@iss-ai/plugin-search": "workspace:*",
     "@iss-ai/plugin-storage": "workspace:*",
     "@iss-ai/plugin-style-props": "workspace:*"
   }
