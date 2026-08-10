@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import vue from '@vitejs/plugin-vue';
-import { resolve } from 'path';
+
 
 export default defineConfig({
   envPrefix: ['VITE_', 'ABLY_', 'CHANNEL_'],
@@ -9,13 +9,7 @@ export default defineConfig({
     exclude: ['@iss-ai/plugin-cooperation']
   },
   resolve: {
-    alias: {
-      'plugin-menu': resolve(__dirname, '../plugins/plugin-menu/src/index.ts'),
-      'plugin-my-library': resolve(__dirname, '../plugins/plugin-my-library/src/index.ts'),
-      'plugin-storage': resolve(__dirname, '../plugins/plugin-storage/src/index.ts'),
-      'plugin-style-props': resolve(__dirname, '../plugins/plugin-style-props/src/index.ts'),
-      'plugin-ai': resolve(__dirname, '../plugins/plugin-ai/src/index.ts'),
-    }
+    alias: {}
   },
   plugins: [
     vue(),
