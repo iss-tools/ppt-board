@@ -4,6 +4,10 @@ import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 
 export default defineConfig({
+  envPrefix: ['VITE_', 'ABLY_', 'CHANNEL_'],
+  optimizeDeps: {
+    exclude: ['@iss-ai/plugin-cooperation']
+  },
   resolve: {
     alias: {
       'plugin-menu': resolve(__dirname, '../plugins/plugin-menu/src/index.ts'),

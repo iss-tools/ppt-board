@@ -61,7 +61,11 @@ import { SearchPlugin } from '@iss-ai/plugin-search';
 import { StoragePlugin } from '@iss-ai/plugin-storage';
 import { StylePropsPlugin } from '@iss-ai/plugin-style-props';
 import { AIPlugin } from '@iss-ai/plugin-ai';
-import { CooperationPlugin } from '@iss-ai/plugin-cooperation';
+import { createCooperationPlugin } from '@iss-ai/plugin-cooperation';
+
+// @ts-ignore
+const ablyApiKey = import.meta.env.VITE_ABLY_API_KEY;
+console.log('DEBUG: ABLY_API_KEY from import.meta.env is:', ablyApiKey);
 
 const activePlugins = [
   MenuPlugin,
@@ -70,7 +74,7 @@ const activePlugins = [
   StoragePlugin,
   StylePropsPlugin,
   AIPlugin,
-  CooperationPlugin
+  createCooperationPlugin({ useP2P: true, ablyApiKey })
 ];
 
 const editorRef = ref<InstanceType<typeof VueCanvasEditor> | null>(null);
