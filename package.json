@@ -109,12 +109,11 @@
     "vue-tsc": "^2.1.10"
   },
   "peerDependencies": {
-    "@iss-ai/vue-canvas-core": "^0.0.13",
-    "vue": "^3.0.0"
-  },
-  "dependencies": {
+    "@iss-ai/vue-canvas-core": "workspace:*",
+    "vue": "^3.0.0",
     "animate.css": "^4.1.1",
     "dexie": "^4.4.4",
     "naive-ui": "^2.44.1"
-  }
+  },
+  "dependencies": {}
 }

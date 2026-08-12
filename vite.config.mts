@@ -23,7 +23,7 @@ export default defineConfig({
     sourcemap: false,
     lib: {
       entry: './src/index.ts',
-      name: '$utils',
+      name: 'PptBoard',
       fileName: (format) => `index.${format === 'es' ? 'esm' : (format === 'cjs' ? 'cjs' : format === 'iife' ? 'min' : format)}.js`,
       formats: ['es', 'cjs', 'umd', 'iife'],
     },
@@ -32,10 +32,9 @@ export default defineConfig({
       output: {
         globals: {
           vue: 'Vue',
-          react: 'React',
-          'react-dom': 'ReactDOM',
-          svelte: 'Svelte',
-          'solid-js': 'Solid',
+          '@iss-ai/vue-canvas-core': 'VueCanvasCore',
+          'naive-ui': 'naive',
+          'dexie': 'Dexie'
         }
       }
     }
