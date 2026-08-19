@@ -30,7 +30,12 @@
     <VueCanvasEditor v-if="!isPreviewing" ref="editorRef" />
     <Preview v-else ref="previewRef" />
 
-    <n-modal v-model:show="showImportModal" preset="card" style="width: 600px" title="Import JSON Data">
+    <n-modal
+      v-model:show="showImportModal"
+      preset="card"
+      style="width: 600px"
+      title="Import JSON Data"
+    >
       <n-tabs type="segment">
         <n-tab-pane name="upload" tab="Upload JSON File">
           <n-upload accept=".json" :default-upload="false" @change="handleFileUpload">
@@ -38,8 +43,15 @@
           </n-upload>
         </n-tab-pane>
         <n-tab-pane name="paste" tab="Paste JSON String">
-          <n-input v-model:value="jsonPastedText" type="textarea" rows="10" placeholder="Paste JSON here..." />
-          <n-button type="primary" style="margin-top: 12px" @click="handlePasteImport">Import</n-button>
+          <n-input
+            v-model:value="jsonPastedText"
+            type="textarea"
+            rows="10"
+            placeholder="Paste JSON here..."
+          />
+          <n-button type="primary" style="margin-top: 12px" @click="handlePasteImport"
+            >Import</n-button
+          >
         </n-tab-pane>
       </n-tabs>
     </n-modal>
@@ -57,9 +69,6 @@ import introPptData from './data/intro.json';
 
 // @ts-ignore
 const ablyApiKey = import.meta.env.VITE_ABLY_API_KEY;
-console.log('DEBUG: ABLY_API_KEY from import.meta.env is:', ablyApiKey);
-
-
 
 const editorRef = ref<InstanceType<typeof VueCanvasEditor> | null>(null);
 const previewRef = ref<InstanceType<typeof Preview> | null>(null);
@@ -68,11 +77,11 @@ onMounted(() => {
   // const data = editorRef.value?.getData();
   // const isEmpty = !data || (data.slides && data.slides.length === 0) || (data.slides && data.slides.length === 1 && (!data.slides[0].elements || data.slides[0].elements.length === 0));
   // editorRef.value?.loadData(isEmpty ? testPptData : data);
-})
+});
 const previewOptions = [
   { label: 'Preview Current Data', key: 'current' },
   { label: 'Preview Rich Example', key: 'example' },
-  { label: 'Preview Vue Canvas Intro', key: 'intro' }
+  { label: 'Preview Vue Canvas Intro', key: 'intro' },
 ];
 
 const handlePreviewSelect = (key: string) => {
@@ -117,11 +126,11 @@ const handlePasteImport = () => {
   }
 };
 
-const handleFileUpload = (options: { file: UploadFileInfo, fileList: UploadFileInfo[] }) => {
+const handleFileUpload = (options: { file: UploadFileInfo; fileList: UploadFileInfo[] }) => {
   const file = options.file.file;
   if (!file) return;
   const reader = new FileReader();
-  reader.onload = (e) => {
+  reader.onload = e => {
     try {
       const text = e.target?.result as string;
       const data = JSON.parse(text);
@@ -133,7 +142,6 @@ const handleFileUpload = (options: { file: UploadFileInfo, fileList: UploadFileI
   reader.readAsText(file);
 };
 </script>
-
 
 <style lang="scss" scoped>
 .editor-container {
